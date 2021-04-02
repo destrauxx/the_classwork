@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title%} News App{% endblock %}</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #775ADA;
+        }
+        #submit {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            left: 867px;
+            top: 323px;
+            border-radius: 50%;
+            background: #21E6C1;
+            border: none;
+            font-size: 27px;
+        }
+        .form_hered {
+            position: absolute;
+            left: 493px;
+            top: 177px;
+            font-family: PT Sans;
+            font-weight: 500;
+            font-size: 35px;
+            line-height: 45px;
+            text-align: center;
+            color: #000000;
+        }
+        nav {
+            position: relative;
+            background: #002651;
+        }
+        #homepage {
+            text-decoration: none;
+            font-family: PT Sans;
+            font-size: 27px;
+            line-height: 35px;
+            color: #FFFFFF;
+        }
+        #create {
+            position: absolute;
+            left: 195px;
+            top: 13px;
+            text-decoration: none;
+            font-family: PT Sans;
+            font-size: 27px;
+            line-height: 35px;
+            color: #FFFFFF;
+        }
+        .article_hered {
+            position: absolute;
+            left: 454px;
+            top: 233px;
+            font-family: PT Sans;
+            font-size: 20px;
+            line-height: 26px;
+            color: #000000;
+        }
+        .body_hered {
+            position: absolute;
+            left: 454px;
+            top: 319px;
+            font-family: PT Sans;
+            font-size: 20px;
+            line-height: 26px;
+            color: #000000;
+        }
+        #article {
+            position: absolute;
+            width: 392px;
+            height: 48px;
+            left: 454px;
+            top: 280px;
+            border: none;
+            background: #FFFFFF;
+            border-radius: 15px;
+        }
+        #body {
+            position: absolute;
+            width: 392px;
+            height: 48px;
+            left: 454px;
+            top: 368px;
+            border: none;
+            background: #FFFFFF;
+            border-radius: 15px;
+        }
+        #homepage::before {
+            content: '';
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            position: absolute;
+            height: 2px;
+            background-color: #fff;
+            transition: 0.2s;
+        }
+        #homepage:hover:before {
+            width: 100%;
+        }
+        #create::before {
+            content: '';
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            position: absolute;
+            height: 2px;
+            background-color: #fff;
+            transition: 0.2s;
+        }
+        #create:hover:before {
+            width: 100%;
+        }
+        .rect1 {
+            position: absolute;
+            width: 45px;
+            height: 275px;
+            left: 1159px;
+            top: 121px;
+
+            background: #FF304F;
+            box-shadow: 7px 5px 2px 2px rgba(0, 0, 0, 0.25);
+            border-radius: 5px;
+        }
+        .rect {
+            position: absolute;
+            width: 45px;
+            height: 275px;
+            left: 250px;
+            top: 400px;
+
+            background: #FF304F;
+            box-shadow: -7px 5px 2px 2px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+            transform: rotate(-90deg);
+        }
+        .cir1 {
+            position: absolute;
+            width: 44px;
+            height: 44px;
+            left: 792px;
+            top: 77px;
+
+            background: #FF304F;
+            box-shadow: 7px 5px 2px 2px rgba(0, 0, 0, 0.25);
+            border-radius: 50%;
+        }
+        .cir2 {
+            position: absolute;
+            width: 97px;
+            height: 97px;
+            left: 897px;
+            top: 540px;
+
+            background: #FF304F;
+            box-shadow: 7px 5px 2px 2px rgba(0, 0, 0, 0.25);
+            border-radius: 50%;
+        }
+        .cir3 {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            left: 167px;
+            top: 199px;
+
+            background: #FF304F;
+            box-shadow: 7px 5px 2px 2px rgba(0, 0, 0, 0.25);
+            border-radius: 50%;
+        }
+        /* .nav-menu {
+            display: flex;
+            justify-content: flex-end;
+        } */
+
+        .nav-menu a {
+            color: #fff;
+            text-decoration: none;
+        }
+        nav {
+            padding: 1.45em;
+            background-color: #002651;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    {% include 'navbar.html' %}
+    {% block content %}
+    {% endblock %}
+
+    {% block js %}
+    {% endblock %}
+</body>
+</html>
